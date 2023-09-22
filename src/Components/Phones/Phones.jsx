@@ -16,7 +16,7 @@ const Phones = ({phones}) => {
     );
 };
 Phones.propTypes = {
-    phones: PropTypes.object.isRequired
+    phones: PropTypes.array.isRequired
 }
 
 export default Phones;

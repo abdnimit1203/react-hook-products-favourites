@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import PhoneCard from "../Phone/PhoneCard";
+import { FaBookBookmark} from 'react-icons/fa6'
+
 
 
 const Favorites = () => {
@@ -30,7 +32,8 @@ useEffect(()=>{
 console.log(favorites);
     return (
         <div>
-            <h2 className="text-3xl font-bold text-red-600 text-center pb-8">Favorites🤗</h2>
+           
+            <h2 className="text-3xl font-bold text-red-600 text-center pb-8 flex justify-center gap-3"><span><FaBookBookmark/></span>Favorites🤗</h2>
            
             
             {
@@ -40,7 +43,7 @@ console.log(favorites);
                 {!noData?favorites.length >0 && <button className="btn btn-sm btn-success" onClick={handleRemove}>Delete all</button>:""}
 
                 {/* <h2>Total Price: {total}</h2> */}
-                <div className="py-6 grid grid-cols-2 px-10 items-center
+                <div className="py-6 grid grid-cols-1 md:grid-cols-2 px-10 items-center
                 ">
                     {
                     isShow? favorites.map(phone=><PhoneCard key={phone.id} phone={phone}></PhoneCard>):

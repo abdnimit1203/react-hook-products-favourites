@@ -37,7 +37,7 @@ console.log(favorites);
                noData? <p className="text-center font-bold uppercase text-4xl py-20 text-error border rounded-xl">NO DATA FOUND</p>: 
                <div className="text-center">
 
-                {!isShow?favorites.length >0 && <button className="btn btn-sm btn-success" onClick={handleRemove}>Delete all</button>:""}
+                {!noData?favorites.length >0 && <button className="btn btn-sm btn-success" onClick={handleRemove}>Delete all</button>:""}
 
                 {/* <h2>Total Price: {total}</h2> */}
                 <div className="py-6 grid grid-cols-2 px-10 items-center
